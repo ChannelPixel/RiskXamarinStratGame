@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:danielCherrin_StratGame"
+             x:Class="danielCherrin_StratGame.MainPage">
+
+    <Grid BackgroundColor="Black">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Button x:Name="btn_Done" Grid.Row="0" Grid.Column="0" Clicked="btn_Done_Clicked"
+                HorizontalOptions="CenterAndExpand" HeightRequest="50" 
+                BackgroundColor="DarkSlateGray" TextColor="Gainsboro" BorderColor="Gainsboro"
+                Text="Done"/>
+
+        <Grid Grid.Row="1" Grid.Column="0" 
+              HorizontalOptions="Center" VerticalOptions="Center"
+              BackgroundColor="Black">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <ListView x:Name="UIGridColumn00" Grid.Row="0" Grid.Column="0" 
+                      HorizontalScrollBarVisibility="Never" VerticalScrollBarVisibility="Never"
+                      WidthRequest="50">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Label Text="{Binding CellUnits}" BackgroundColor="{Binding CellColor}" HorizontalOptions="Center" Margin="0,2,0,2"
+                                   HorizontalTextAlignment="Center" VerticalTextAlignment="Center" WidthRequest="50" HeightRequest="50">
+                                <Label.GestureRecognizers>
+                                    <SwipeGestureRecognizer Direction="Up" CommandParameter="{Binding}" Swiped="SwipeGestureRecognizer_Swiped"/>
+                                    <SwipeGestureRecognizer Direction="Right" CommandParameter="{Binding}" Swiped="SwipeGestureRecognizer_Swiped"/>
+                                    <SwipeGestureRecognizer Direction="Down" CommandParameter="{Binding}" Swiped="SwipeGestureRecognizer_Swiped"/>
+                                    <SwipeGestureRecognizer Direction="Left" CommandParameter="{Binding}" Swiped="SwipeGestureRecognizer_Swiped"/>
+                                </Label.GestureRecognizers>
+                            </Label>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <ListView x:Name="UIGridColumn01" Grid.Row="0" Grid.Column="1" 
+                      HorizontalScrollBarVisibility="Never" VerticalScrollBarVisibility="Never"
+                      WidthRequest="50">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Label Text="{Binding CellUnits}" BackgroundColor="{Binding CellColor}" HorizontalOptions="Center" Margin="0,2,0,2"
+                                   HorizontalTextAlignment="Center" VerticalTextAlignment="Center" WidthRequest="50" HeightRequest="50">
+                                <Label.GestureRecognizers>
+                                    <SwipeGestureRecognizer Direction="Up" CommandParameter="{Binding .}" Swiped="SwipeGestureRecognizer_Swiped"/>
+                                    <SwipeGestureRecognizer Direction="Right" CommandParameter="{Binding .}" Swiped="SwipeGestureRecognizer_Swiped"/>
+                                    <SwipeGestureRecognizer Direction="Down" CommandParameter="{Binding .}" Swiped="SwipeGestureRecognizer_Swiped"/>
+                                    <SwipeGestureRecognizer Direction="Left" CommandParameter="{Binding .}" Swiped="SwipeGestureRecognizer_Swiped"/>
+                                </Label.GestureRecognizers>
+                            </Label>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <ListView x:Name="UIGridColumn02" Grid.Row="0" Grid.Column="2" 
+                      HorizontalScrollBarVisibility="Never" VerticalScrollBarVisibility="Never"
+                      WidthRequest="50">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Label Text="{Binding CellUnits}" BackgroundColor="{Binding CellColor}" HorizontalOptions="Center" Margin="0,2,0,2"
+                                   HorizontalTextAlignment="Center" VerticalTextAlignment="Center" WidthRequest="50" HeightRequest="50">
+                                <Label.GestureRecognizers>
+                                    <SwipeGestureRecognizer Direction="Up" CommandParameter="{Binding .}" Swiped="SwipeGestureRecognizer_Swiped"/>
+                                    <SwipeGestureRecognizer Direction="Right" CommandParameter="{Binding .}" Swiped="SwipeGestureRecognizer_Swiped"/>
+                                    <SwipeGestureRecognizer Direction="Down" CommandParameter="{Binding .}" Swiped="SwipeGestureRecognizer_Swiped"/>
+                                    <SwipeGestureRecognizer Direction="Left" CommandParameter="{Binding .}" Swiped="SwipeGestureRecognizer_Swiped"/>
+                                </Label.GestureRecognizers>
+                            </Label>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <ListView x:Name="UIGridColumn03" Grid.Row="0" Grid.Column="3" 
+                      HorizontalScrollBarVisibility="Never" VerticalScrollBarVisibility="Never"
+                      WidthRequest="50">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Label Text="{Binding CellUnits}" BackgroundColor="{Binding CellColor}" HorizontalOptions="Center" Margin="0,2,0,2"
+                                   HorizontalTextAlignment="Center" VerticalTextAlignment="Center" WidthRequest="50" HeightRequest="50">
+                                <Label.GestureRecognizers>
+                                    <SwipeGestureRecognizer Direction="Up" CommandParameter="{Binding .}" Swiped="SwipeGestureRecognizer_Swiped"/>
+                                    <SwipeGestureRecognizer Direction="Right" CommandParameter="{Binding .}" Swiped="SwipeGestureRecognizer_Swiped"/>
+                                    <SwipeGestureRecognizer Direction="Down" CommandParameter="{Binding .}" Swiped="SwipeGestureRecognizer_Swiped"/>
+                                    <SwipeGestureRecognizer Direction="Left" CommandParameter="{Binding .}" Swiped="SwipeGestureRecognizer_Swiped"/>
+                                </Label.GestureRecognizers>
+                            </Label>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <ListView x:Name="UIGridColumn04" Grid.Row="0" Grid.Column="4" 
+                      HorizontalScrollBarVisibility="Never" VerticalScrollBarVisibility="Never"
+                      WidthRequest="50">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Label Text="{Binding CellUnits}" BackgroundColor="{Binding CellColor}" HorizontalOptions="Center" Margin="0,2,0,2"
+                                   HorizontalTextAlignment="Center" VerticalTextAlignment="Center" WidthRequest="50" HeightRequest="50">
+                                <Label.GestureRecognizers>
+                                    <SwipeGestureRecognizer Direction="Up" CommandParameter="{Binding .}" Swiped="SwipeGestureRecognizer_Swiped"/>
+                                    <SwipeGestureRecognizer Direction="Right" CommandParameter="{Binding .}" Swiped="SwipeGestureRecognizer_Swiped"/>
+                                    <SwipeGestureRecognizer Direction="Down" CommandParameter="{Binding .}" Swiped="SwipeGestureRecognizer_Swiped"/>
+                                    <SwipeGestureRecognizer Direction="Left" CommandParameter="{Binding .}" Swiped="SwipeGestureRecognizer_Swiped"/>
+                                </Label.GestureRecognizers>
+                            </Label>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Grid>
+
+    </Grid>
+
+</ContentPage>
